@@ -1,0 +1,24 @@
+<section id="experience" class="alt-bg">
+  <div class="section-header" appFadeIn>
+    <div class="section-tag">Experience</div>
+    <h2 class="section-title">Professional Journey</h2>
+    <p class="section-desc">From vehicle quality auditing to global integration platforms</p>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let exp of experiences" appFadeIn>
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">{{ exp.date }}</div>
+      <div class="timeline-content">
+        <h3>{{ exp.title }}</h3>
+        <span class="company">{{ exp.company }}</span>
+        <div class="location"><i class="fas fa-location-dot"></i> {{ exp.location }}</div>
+        <ul>
+          <li *ngFor="let point of exp.points">{{ point }}</li>
+        </ul>
+        <div class="tech-stack">
+          <span class="tech-tag" *ngFor="let t of exp.tech">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

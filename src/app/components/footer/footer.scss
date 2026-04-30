@@ -1,0 +1,13 @@
+footer {
+  text-align: center;
+  padding: 3rem 5%;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.heart {
+  color: var(--accent-warm);
+  display: inline-block;
+  animation: heartbeat 1.5s ease infinite;
+}

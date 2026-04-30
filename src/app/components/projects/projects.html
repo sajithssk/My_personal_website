@@ -1,0 +1,28 @@
+<section id="projects" class="alt-bg">
+  <div class="section-header" appFadeIn>
+    <div class="section-tag">Portfolio</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-desc">Real-world applications built with modern technologies</p>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects" appFadeIn>
+      <div class="project-content">
+        <div class="project-header">
+          <div>
+            <h3 class="project-title">{{ project.title }}</h3>
+            <span class="project-subtitle">{{ project.subtitle }}</span>
+          </div>
+          <div class="project-links">
+            <a *ngIf="project.locked" href="#" title="Private Repository"><i class="fas fa-lock"></i></a>
+            <a *ngIf="!project.locked && project.link" [href]="project.link" target="_blank" title="View Project"><i class="fas fa-external-link-alt"></i></a>
+            <a *ngIf="!project.locked && project.github" [href]="project.github" target="_blank" title="Source Code"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <p class="project-desc">{{ project.desc }}</p>
+        <div class="tech-stack">
+          <span class="tech-tag" *ngFor="let t of project.tech">{{ t }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

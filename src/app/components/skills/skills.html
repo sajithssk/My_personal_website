@@ -1,0 +1,42 @@
+<section id="skills">
+  <div class="section-header" appFadeIn>
+    <div class="section-tag">Technical Arsenal</div>
+    <h2 class="section-title">Skills & Technologies</h2>
+    <p class="section-desc">A comprehensive toolkit for modern software development</p>
+  </div>
+
+  <div class="skills-container" appFadeIn>
+    <div class="ai-section">
+      <div class="ai-header">
+        <div class="ai-icon">🤖</div>
+        <div>
+          <h3>Artificial Intelligence & Machine Learning</h3>
+          <p>Integrating AI into production-grade applications</p>
+        </div>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card" *ngFor="let cap of aiCapabilities">
+          <h4><i class="fas fa-{{cap.icon}}"></i> {{ cap.title }}</h4>
+          <p>{{ cap.desc }}</p>
+        </div>
+      </div>
+      <div class="ai-tools">
+        <span class="ai-tool-tag" *ngFor="let tool of aiTools">
+          <i class="fas fa-check"></i> {{ tool }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card" *ngFor="let cat of skillCategories" appFadeIn>
+      <div class="skill-card-header">
+        <div class="skill-icon"><i class="fab {{cat.icon}}"></i></div>
+        <h3>{{ cat.title }}</h3>
+      </div>
+      <div class="skill-list">
+        <span class="skill-item" *ngFor="let skill of cat.skills">{{ skill }}</span>
+      </div>
+    </div>
+  </div>
+</section>

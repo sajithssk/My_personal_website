@@ -1,0 +1,17 @@
+<section id="contact" class="contact-section">
+  <div class="contact-container" appFadeIn>
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Let's Build Something Amazing</h2>
+    <p class="section-desc">
+      I'm currently open to new opportunities in software engineering, AI integration, and cloud architecture.
+      Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    </p>
+    <div class="contact-links">
+      <a *ngFor="let c of contacts" [href]="c.href" class="contact-link" [target]="c.isBrand ? '_blank' : '_self'">
+        <i *ngIf="!c.isBrand" class="fas fa-{{c.icon}}"></i>
+        <i *ngIf="c.isBrand" class="fab fa-{{c.icon}}"></i>
+        <span>{{ c.label }}</span>
+      </a>
+    </div>
+  </div>
+</section>

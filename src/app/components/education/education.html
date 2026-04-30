@@ -1,0 +1,40 @@
+<section id="education">
+  <div class="section-header" appFadeIn>
+    <div class="section-tag">Background</div>
+    <h2 class="section-title">Education & Achievements</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card" appFadeIn>
+      <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+      <div class="edu-content">
+        <div class="institution">College of Engineering Pathanapuram</div>
+        <div class="degree">Bachelor of Technology in Computer Science</div>
+        <div class="details">
+          <p><i class="fas fa-calendar"></i> July 2018 – July 2022</p>
+          <p><i class="fas fa-location-dot"></i> Kerala, India</p>
+        </div>
+      </div>
+    </div>
+    <div class="edu-card" appFadeIn>
+      <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+      <div class="edu-content">
+        <div class="institution">St. Mary's HSS</div>
+        <div class="degree">Higher Secondary</div>
+        <div class="details">
+          <p><i class="fas fa-calendar"></i> April 2016 – March 2018</p>
+          <p><i class="fas fa-location-dot"></i> Kerala, India</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-card" appFadeIn>
+      <h3><i class="fas fa-trophy"></i> Achievements</h3>
+      <ul class="achievements-list">
+        <li *ngFor="let ach of achievements">
+          <i class="fas fa-{{ach.icon}}"></i>
+          <span [innerHTML]="ach.text"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

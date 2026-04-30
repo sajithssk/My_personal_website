@@ -1,0 +1,13 @@
+<nav [class.scrolled]="isScrolled">
+  <div class="logo">SSK.</div>
+  <ul class="nav-links" [class.open]="mobileMenuOpen">
+    <li><a (click)="scrollTo('about')">About</a></li>
+    <li><a (click)="scrollTo('experience')">Experience</a></li>
+    <li><a (click)="scrollTo('skills')">Skills</a></li>
+    <li><a (click)="scrollTo('projects')">Projects</a></li>
+    <li><a (click)="scrollTo('contact')">Contact</a></li>
+  </ul>
+  <div class="mobile-menu" (click)="toggleMenu()">
+    <i class="fas" [class.fa-bars]="!mobileMenuOpen" [class.fa-times]="mobileMenuOpen"></i>
+  </div>
+</nav>
