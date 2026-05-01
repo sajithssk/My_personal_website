@@ -6,16 +6,16 @@
   </div>
 
   <div class="skills-container" appFadeIn>
-    <div class="ai-section">
+    <div class="ai-section glow">
       <div class="ai-header">
-        <div class="ai-icon">🤖</div>
+        <div class="ai-icon float">🤖</div>
         <div>
           <h3>Artificial Intelligence & Machine Learning</h3>
           <p>Integrating AI into production-grade applications</p>
         </div>
       </div>
-      <div class="ai-grid">
-        <div class="ai-card" *ngFor="let cap of aiCapabilities">
+      <div class="ai-grid stagger-children">
+        <div class="ai-card magnetic-hover" *ngFor="let cap of aiCapabilities">
           <h4><i class="fas fa-{{cap.icon}}"></i> {{ cap.title }}</h4>
           <p>{{ cap.desc }}</p>
         </div>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="skills-grid">
-    <div class="skill-card" *ngFor="let cat of skillCategories" appFadeIn>
+    <div class="skill-card tilt-card magnetic-hover" *ngFor="let cat of skillCategories" appFadeIn>
       <div class="skill-card-header">
         <div class="skill-icon"><i class="fab {{cat.icon}}"></i></div>
         <h3>{{ cat.title }}</h3>

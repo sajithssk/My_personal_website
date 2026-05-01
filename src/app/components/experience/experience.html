@@ -4,11 +4,12 @@
     <h2 class="section-title">Professional Journey</h2>
     <p class="section-desc">From vehicle quality auditing to global integration platforms</p>
   </div>
+
   <div class="timeline">
-    <div class="timeline-item" *ngFor="let exp of experiences" appFadeIn>
-      <div class="timeline-dot"></div>
+    <div class="timeline-item" *ngFor="let exp of experiences; let i = index" appFadeIn>
+      <div class="timeline-dot glow"></div>
       <div class="timeline-date">{{ exp.date }}</div>
-      <div class="timeline-content">
+      <div class="timeline-content tilt-card magnetic-hover">
         <h3>{{ exp.title }}</h3>
         <span class="company">{{ exp.company }}</span>
         <div class="location"><i class="fas fa-location-dot"></i> {{ exp.location }}</div>

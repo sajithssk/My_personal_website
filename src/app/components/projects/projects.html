@@ -4,8 +4,9 @@
     <h2 class="section-title">Featured Projects</h2>
     <p class="section-desc">Real-world applications built with modern technologies</p>
   </div>
-  <div class="projects-grid">
-    <div class="project-card" *ngFor="let project of projects" appFadeIn>
+
+  <div class="projects-grid stagger-children">
+    <div class="project-card tilt-card magnetic-hover" *ngFor="let project of projects" appFadeIn>
       <div class="project-content">
         <div class="project-header">
           <div>

@@ -3,8 +3,9 @@
     <div class="section-tag">Background</div>
     <h2 class="section-title">Education & Achievements</h2>
   </div>
+
   <div class="edu-grid">
-    <div class="edu-card" appFadeIn>
+    <div class="edu-card tilt-card magnetic-hover" appFadeIn>
       <h3><i class="fas fa-graduation-cap"></i> Education</h3>
       <div class="edu-content">
         <div class="institution">College of Engineering Pathanapuram</div>
@@ -15,7 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="edu-card" appFadeIn>
+    <div class="edu-card tilt-card magnetic-hover" appFadeIn>
       <h3><i class="fas fa-graduation-cap"></i> Education</h3>
       <div class="edu-content">
         <div class="institution">St. Mary's HSS</div>
@@ -27,9 +28,9 @@
       </div>
     </div>
 
-    <div class="edu-card" appFadeIn>
+    <div class="edu-card tilt-card magnetic-hover" appFadeIn>
       <h3><i class="fas fa-trophy"></i> Achievements</h3>
-      <ul class="achievements-list">
+      <ul class="achievements-list stagger-children">
         <li *ngFor="let ach of achievements">
           <i class="fas fa-{{ach.icon}}"></i>
           <span [innerHTML]="ach.text"></span>
