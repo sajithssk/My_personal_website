@@ -1,48 +1,49 @@
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-bg-2"></div>
+  <div class="hero-particles"></div>
+
   <div class="hero-content">
-    <div class="hero-badge">
-      <i class="fas fa-circle-check"></i>
+    <div class="hero-badge magnetic-hover">
+      <i class="fas fa-circle-check check-green"></i>
       Available for Opportunities
     </div>
+
     <h1>
-      Hi, I'm <span class="highlight">Sajith Sajan Koshy</span><br>
+      Hi, I'm <span class="highlight gradient-text-animate">Sajith Sajan Koshy</span><br>
       <span class="typing-wrapper">
-        <!-- Keyed element: Angular destroys and recreates this span every time 'key' changes -->
-        <span
-          class="typing-text"
-          [attr.data-key]="key">
-          {{ texts[currentIndex] }}
-        </span>
+        <span class="typing-text" [attr.data-key]="key">{{ texts[currentIndex] }}</span>
         <span class="typing-cursor">|</span>
       </span>
     </h1>
+
     <p class="hero-subtitle">
       Senior Software Engineer specializing in full-stack development, cloud-native architectures,
       and AI-powered solutions. Building scalable enterprise applications with modern technologies.
     </p>
+
     <div class="hero-buttons">
-      <button class="btn btn-primary" (click)="scrollToContact()">
+      <button class="btn btn-primary magnetic-btn" (click)="scrollToContact()">
         <i class="fas fa-paper-plane"></i>
         Get In Touch
       </button>
-      <a href="https://github.com/sajithssk" target="_blank" class="btn btn-secondary">
+      <a href="https://github.com/sajithssk" target="_blank" class="btn btn-secondary magnetic-hover">
         <i class="fab fa-github"></i>
         View GitHub
       </a>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-number">4+</div>
+
+    <div class="hero-stats stagger-children">
+      <div class="stat magnetic-hover">
+        <div class="stat-number pulse-glow">4+</div>
         <div class="stat-label">Years Experience</div>
       </div>
-      <div class="stat">
-        <div class="stat-number">400+</div>
+      <div class="stat magnetic-hover">
+        <div class="stat-number pulse-glow">400+</div>
         <div class="stat-label">Problems Solved</div>
       </div>
-      <div class="stat">
-        <div class="stat-number">10+</div>
+      <div class="stat magnetic-hover">
+        <div class="stat-number pulse-glow">10+</div>
         <div class="stat-label">Technologies</div>
       </div>
     </div>

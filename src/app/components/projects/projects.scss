@@ -11,8 +11,9 @@
   border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  transform-style: preserve-3d;
 
   &::before {
     content: '';
@@ -27,7 +28,7 @@
   }
 
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) perspective(1000px) rotateX(2deg);
     box-shadow: var(--shadow);
     border-color: rgba(99, 102, 241, 0.3);
 
@@ -79,6 +80,7 @@
       background: var(--primary);
       color: white;
       border-color: var(--primary);
+      transform: translateY(-2px);
     }
   }
 }

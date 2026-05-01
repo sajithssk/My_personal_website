@@ -22,7 +22,7 @@ export class HeroComponent {
   constructor() {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.texts.length;
-      this.key++; // Force DOM recreation
+      this.key++;
     }, 3500);
   }
 

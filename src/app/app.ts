@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar';
 import { HeroComponent } from './components/hero/hero';
 import { AboutComponent } from './components/about/about';
@@ -8,11 +9,13 @@ import { ProjectsComponent } from './components/projects/projects';
 import { EducationComponent } from './components/education/education';
 import { ContactComponent } from './components/contact/contact';
 import { FooterComponent } from './components/footer/footer';
+import { ScrollTopComponent } from './components/scroll-top/scroll-top';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    CommonModule,
     NavbarComponent,
     HeroComponent,
     AboutComponent,
@@ -22,6 +25,7 @@ import { FooterComponent } from './components/footer/footer';
     EducationComponent,
     ContactComponent,
     FooterComponent,
+    ScrollTopComponent,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],

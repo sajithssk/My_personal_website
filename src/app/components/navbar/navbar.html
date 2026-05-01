@@ -1,13 +1,24 @@
 <nav [class.scrolled]="isScrolled">
-  <div class="logo">SSK.</div>
+  <div class="nav-brand">
+    <span class="logo-text">SSK</span>
+    <span class="logo-dot">.</span>
+  </div>
+
   <ul class="nav-links" [class.open]="mobileMenuOpen">
-    <li><a (click)="scrollTo('about')">About</a></li>
-    <li><a (click)="scrollTo('experience')">Experience</a></li>
-    <li><a (click)="scrollTo('skills')">Skills</a></li>
-    <li><a (click)="scrollTo('projects')">Projects</a></li>
-    <li><a (click)="scrollTo('contact')">Contact</a></li>
+    <li *ngFor="let tab of tabs">
+      <a
+        (click)="scrollToSection(tab.section, tab.path)"
+        [class.active]="isActive(tab.section)">
+        <i class="fas {{tab.icon}}"></i>
+        <span>{{ tab.label }}</span>
+      </a>
+    </li>
   </ul>
-  <div class="mobile-menu" (click)="toggleMenu()">
-    <i class="fas" [class.fa-bars]="!mobileMenuOpen" [class.fa-times]="mobileMenuOpen"></i>
+
+  <div class="nav-actions">
+    <app-theme-toggle></app-theme-toggle>
+    <div class="mobile-menu" (click)="toggleMenu()">
+      <i class="fas" [class.fa-bars]="!mobileMenuOpen" [class.fa-times]="mobileMenuOpen"></i>
+    </div>
   </div>
 </nav>

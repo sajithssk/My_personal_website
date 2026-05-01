@@ -1,0 +1,6 @@
+<button class="theme-toggle" (click)="themeService.toggle()" [attr.aria-label]="label">
+  <span class="toggle-icon">
+    <i class="fas" [class.fa-moon]="icon === 'moon'" [class.fa-sun]="icon === 'sun'" [class.fa-desktop]="icon === 'desktop'"></i>
+  </span>
+  <span class="toggle-glow"></span>
+</button>

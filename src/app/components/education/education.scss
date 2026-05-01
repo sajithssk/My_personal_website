@@ -12,6 +12,13 @@
   border-radius: 20px;
   padding: 2rem;
   backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: translateY(-5px) perspective(1000px) rotateX(2deg);
+    box-shadow: var(--shadow);
+  }
 
   h3 {
     font-size: 1.2rem;
@@ -60,6 +67,12 @@
     align-items: center;
     gap: 0.75rem;
     color: var(--text-muted);
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--text);
+      transform: translateX(5px);
+    }
 
     &:last-child {
       border-bottom: none;
