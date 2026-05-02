@@ -28,3 +28,5 @@ jobs:
         with:
           folder: dist/sajith-portfolio/browser
           branch: gh-pages
+          clean: true
+          token: ${{ secrets.PAT_TOKEN }}
