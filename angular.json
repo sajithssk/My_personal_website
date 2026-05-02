@@ -32,7 +32,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "baseHref": "/portfolio/"
+            "baseHref": "/My_personal_website/"
           },
           "configurations": {
             "production": {
