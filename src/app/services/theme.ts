@@ -1,6 +1,6 @@
 import { Injectable, signal, effect } from '@angular/core';
 
-export type Theme = 'dark' | 'light' | 'system';
+export type Theme = 'dark' | 'light';
 
 @Injectable({
   providedIn: 'root',
@@ -15,19 +15,11 @@ export class ThemeService {
 
     effect(() => {
       const current = this.theme();
+      this.isDark.set(current === 'dark');
+
       const root = document.documentElement;
-
-      if (current === 'system') {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        this.isDark.set(prefersDark);
-      } else {
-        this.isDark.set(current === 'dark');
-      }
-
       root.classList.remove('theme-dark', 'theme-light');
-      if (current !== 'system') {
-        root.classList.add(`theme-${current}`);
-      }
+      root.classList.add(`theme-${current}`);
 
       localStorage.setItem('theme', current);
     });
@@ -35,9 +27,7 @@ export class ThemeService {
 
   toggle() {
     const current = this.theme();
-    if (current === 'dark') this.theme.set('light');
-    else if (current === 'light') this.theme.set('system');
-    else this.theme.set('dark');
+    this.theme.set(current === 'dark' ? 'light' : 'dark');
   }
 
   setTheme(theme: Theme) {

@@ -13,16 +13,10 @@ export class ThemeToggleComponent {
   themeService = inject(ThemeService);
 
   get icon() {
-    const theme = this.themeService.theme();
-    if (theme === 'dark') return 'moon';
-    if (theme === 'light') return 'sun';
-    return 'desktop';
+    return this.themeService.theme() === 'dark' ? 'moon' : 'sun';
   }
 
   get label() {
-    const theme = this.themeService.theme();
-    if (theme === 'dark') return 'Dark Mode';
-    if (theme === 'light') return 'Light Mode';
-    return 'System Default';
+    return this.themeService.theme() === 'dark' ? 'Dark Mode' : 'Light Mode';
   }
 }

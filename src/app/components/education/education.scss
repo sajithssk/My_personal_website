@@ -85,8 +85,52 @@
   }
 }
 
+/* ==================== RESPONSIVE FIXES ==================== */
+
 @media (max-width: 968px) {
   .edu-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .edu-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .edu-card {
+    padding: 1.25rem;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .edu-content {
+    .institution {
+      font-size: 1rem;
+    }
+
+    .degree {
+      font-size: 0.9rem;
+    }
+
+    .details {
+      font-size: 0.85rem;
+    }
+  }
+
+  .achievements-list {
+    li {
+      font-size: 0.85rem;
+      padding: 0.6rem 0;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .edu-card {
+    padding: 1rem;
   }
 }

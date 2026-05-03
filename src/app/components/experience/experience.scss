@@ -134,6 +134,8 @@
   }
 }
 
+/* ==================== RESPONSIVE FIXES ==================== */
+
 @media (max-width: 968px) {
   .timeline::before {
     left: 20px;
@@ -142,6 +144,7 @@
   .timeline-item {
     grid-template-columns: 1fr;
     padding-left: 50px;
+    gap: 1.5rem;
 
     &:nth-child(even) {
       .timeline-content,
@@ -154,5 +157,79 @@
 
   .timeline-dot {
     left: 20px;
+  }
+
+  .timeline-content {
+    padding: 1.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    ul li {
+      font-size: 0.85rem;
+    }
+  }
+
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .timeline-item {
+    padding-left: 35px;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-dot {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .company {
+      font-size: 0.9rem;
+    }
+
+    .location {
+      font-size: 0.8rem;
+    }
+
+    ul li {
+      font-size: 0.8rem;
+      padding-left: 1.25rem;
+    }
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .timeline-item {
+    padding-left: 28px;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+
+    h3 {
+      font-size: 0.95rem;
+    }
   }
 }

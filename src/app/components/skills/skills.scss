@@ -4,7 +4,7 @@
 }
 
 .ai-section {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(34, 211, 238, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(34, 211, 238, 0.08) 100%);
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 24px;
   padding: 3rem;
@@ -35,10 +35,11 @@
   h3 {
     font-size: 1.5rem;
     margin-bottom: 0.25rem;
+    color: var(--text); // Use theme text color
   }
 
   p {
-    color: var(--text-muted);
+    color: var(--text-muted); // Use theme muted color
   }
 }
 
@@ -56,20 +57,20 @@
 }
 
 .ai-card {
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid var(--border);
+  background: var(--bg-card); // Use theme card background
+  border: 1px solid var(--border); // Use theme border
   border-radius: 16px;
   padding: 1.5rem;
   transition: all 0.3s;
 
   &:hover {
-    background: rgba(15, 23, 42, 0.8);
+    background: var(--bg-light); // Use theme light background
     border-color: var(--accent);
     transform: translateY(-3px);
   }
 
   h4 {
-    color: var(--accent);
+    color: var(--accent); // Keep accent color, works in both themes
     margin-bottom: 0.75rem;
     font-size: 1.1rem;
     display: flex;
@@ -78,7 +79,7 @@
   }
 
   p {
-    color: var(--text-muted);
+    color: var(--text-muted); // Use theme muted color
     font-size: 0.9rem;
     line-height: 1.6;
   }
@@ -99,7 +100,7 @@
   border: 1px solid rgba(34, 211, 238, 0.3);
   border-radius: 50px;
   font-size: 0.85rem;
-  color: var(--accent);
+  color: var(--accent); // Use accent color
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -107,7 +108,7 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -169,12 +170,90 @@
   }
 }
 
+/* ==================== RESPONSIVE FIXES ==================== */
+
 @media (max-width: 640px) {
   .skills-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .ai-section {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .ai-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .ai-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .ai-card {
+    padding: 1.25rem;
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+
+  .ai-tools {
+    gap: 0.4rem;
+  }
+
+  .ai-tool-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .skill-card {
+    padding: 1.5rem;
+  }
+
+  .skill-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .skill-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .ai-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .ai-card {
+    padding: 1rem;
+  }
+
+  .skill-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
