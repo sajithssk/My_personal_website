@@ -129,11 +129,68 @@ nav {
   color: var(--text);
 }
 
+/* ==================== RESPONSIVE FIXES ==================== */
+
 @media (max-width: 968px) {
   .nav-links {
     display: none;
+
+    &.open {
+      display: flex;
+      gap: 0.5rem;
+      padding: 1.5rem;
+    }
   }
+
+  .nav-links a {
+    padding: 0.75rem 1rem;
+    justify-content: center;
+
+    span {
+      display: inline;
+    }
+  }
+
   .mobile-menu {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 0.75rem 4%;
+  }
+
+  .nav-brand {
+    .logo-text,
+    .logo-dot {
+      font-size: 1.25rem;
+    }
+  }
+
+  .nav-links a {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+
+    i {
+      font-size: 1rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .nav-actions {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-brand {
+    .logo-text,
+    .logo-dot {
+      font-size: 1.1rem;
+    }
   }
 }

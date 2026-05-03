@@ -6,11 +6,22 @@
       I'm currently open to new opportunities in software engineering, AI integration, and cloud architecture.
       Whether you have a question or just want to say hi, I'll try my best to get back to you!
     </p>
-    <div class="contact-links stagger-children">
-      <a *ngFor="let c of contacts" [href]="c.href" class="contact-link magnetic-hover" [target]="c.isBrand ? '_blank' : '_self'">
-        <i *ngIf="!c.isBrand" class="fas fa-{{c.icon}}"></i>
-        <i *ngIf="c.isBrand" class="fab fa-{{c.icon}}"></i>
-        <span>{{ c.label }}</span>
+    <div class="contact-links">
+      <a href="mailto:sajithsajan@gmail.com" class="contact-link magnetic-hover">
+        <i class="fas fa-envelope"></i>
+        <span>sajithsajan@gmail.com</span>
+      </a>
+      <a href="tel:+918281638998" class="contact-link magnetic-hover">
+        <i class="fas fa-phone"></i>
+        <span>+91 8281638998</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sajithsajankoshy/" target="_blank" class="contact-link magnetic-hover">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/sajithssk" target="_blank" class="contact-link magnetic-hover">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
       </a>
     </div>
   </div>

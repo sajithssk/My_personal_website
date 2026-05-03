@@ -58,3 +58,24 @@
   opacity: 0;
   transition: opacity 0.3s;
 }
+
+/* ==================== RESPONSIVE FIXES ==================== */
+
+@media (max-width: 640px) {
+  .scroll-top-btn {
+    width: 44px;
+    height: 44px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
